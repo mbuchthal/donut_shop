@@ -1,0 +1,1 @@
+This project is to create a model of a donut shop.  The object has 5 different locations, random customers, and average donuts per customer per store.  We need to calculate a model for the number of donuts needed per hour per store.  Then, we need to manipulate the DOM by adding the data into a table.
