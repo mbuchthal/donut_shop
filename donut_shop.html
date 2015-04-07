@@ -7,7 +7,7 @@
 <body>
   <h1 id="greeting"></h1>
 
-  <table id="table1">
+  <!-- <table id="table1">
     <tr>
         <th scope="col">Location</th>
         <th scope="col">7:00 AM</th>
@@ -24,7 +24,7 @@
         <th scope="col">6:00 PM</th>
         <th scope="col">Total</th>
     </tr>
-
+ -->
 <script>
 
 var Store = function(name, averageDonuts, minCustomers, maxCustomers) {
@@ -34,6 +34,8 @@ var Store = function(name, averageDonuts, minCustomers, maxCustomers) {
   this.maxCustomers = maxCustomers;
   totalHourly = this.totalHourly || [];
 }
+var locations = ['Downtown', 'Capitol Hill', 'South Lake Union', 'Wedgewood', 'Ballard'];
+var times = ['7:00 AM', '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'];
 
 Store.prototype.randomCustomers = function(min, max) {
   return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers;
@@ -48,23 +50,58 @@ Store.prototype.hourlyEats = function() {
 Store.prototype.dailyEats = function() {
   var totalDaily = 0
   var totalHourly = []
-  // var table = document.createElement('table');
-  // var td = document.createElement('td');
   for (var i = 0; i < 11; i++) {
     var temp = this.hourlyEats();
     totalHourly.push(temp);
     console.log(totalHourly);
     totalDaily += temp //this.hourlyEats();
+    return totalDaily;
   }
-  // }
-  // for (var j = 0; j < 11; j++) {
-  //       var td = document.createElement('td');
-  //       td.appendChild(this.totalHourly());
-  //     }
-  //     return totalDaily;
-}
+};
+
+Store.prototype.render = function() {
+  var table = document.createElement('table');
+  document.body.appendChild(table);
+  var cell = document.createElement('tr');
+  table.appendChild(cell);
+
+  for (var k = 0; k < times.length; k++) {
+    var thead = document.createElement('th');
+    var columns = document.createTextNode(locations[k]);
+    thead.appendChild(columns);
+    cell.appendChild(thead);
+  }
+  for (var j = 0; j < totalHourly.length; j++) {
+    var data = this.totalHourly[j];
+    var cell2 = document.createElement('tr');
+      for (var l = 0; l < data.length; l++) {
+        table.appendChild(cell2);
+        var td = document.createElement('td');
+        var data2 = document.createTextNode(data[j]);
+        td.appendChild(data2);
+        cell2.appendChild(td);
+      }
+    }
+  }
 
 
+    //var cell = document.createElement('tr');
+    //cell.innerHTML = '<th scope="row">'' this.name '</th><td>'' this.totalHourly[j] '</td><td>'' this.totalDaily '</td>';
+
+    //cell.appendChild(this.totalHourly[j].render);
+    //cell.appendChild(this.dailyEats());
+  //return table;
+
+
+
+// var table = document.createElement('table');
+// var td = document.createElement('td');
+// }
+// for (var j = 0; j < 11; j++) {
+//       var td = document.createElement('td');
+//       td.appendChild(this.totalHourly());
+//     }
+//     return totalDaily;
 
 var Downtown = new Store('Downtown', 4.50, 8, 43);
 var CapHill = new Store('Capitol Hill', 2.00, 4, 37);
@@ -72,11 +109,18 @@ var South = new Store('South Lake Union', 6.33, 9, 23);
 var Wedge = new Store('Wedgewood', 1.25, 2, 28);
 var Ballard = new Store('Ballard', 3.75, 8, 58);
 
-
-
-
-
-Downtown.dailyEats();
+//var table = document.getElementById('table1');
+// table.appendChild(Downtown.render());
+// table.appendChild(CapHill.render());
+// table.appendChild(South, render());
+// table.appendChild(Wedge, render());
+// table.appendChild(Ballard, render());
+//Downtown.dailyEats();
+Downtown.render();
+CapHill.render();
+South.render();
+Wedge.render();
+Ballard.render();
 
 
 </script>
