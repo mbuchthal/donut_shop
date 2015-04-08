@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Donut Shop</title>
+  <link href="donut_shop_style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
   <h1 id="greeting"> The Donut Shop </h1>
   <p> To add a new location, please complete the following fields:</p>
+  <section>
   <table id="table1">
     <thead><tr>
         <th scope="col">Location</th>
@@ -21,26 +23,24 @@
         <th scope="col">3:00 PM</th>
         <th scope="col">4:00 PM</th>
         <th scope="col">5:00 PM</th>
-        <th scope="col">6:00 PM Total</th>
+        <th scope="col">Total</th>
     </tr></thead>
         <tbody id="tablebody">
         </tbody>
-
-<br />
-
+    </section>
+    <section>
   <form id="new-location-form">
     <label for="storelocation">Location:</label>
-    <input name="storelocation" type="text"><br />
+    <input name="storelocation" type="text">
     <label for="averagedonuts">Average Donuts:</label>
-    <input name="averagedonuts" type="text"><br />
+    <input name="averagedonuts" type="text">
     <label for="mincustomers">Minimum Customers:</label>
-    <input name="mincustomers" type="text"><br />
+    <input name="mincustomers" type="number">
     <label for="maxcustomers">Maximum Customers:</label>
-    <input name="maxcustomers" type="text"><br />
+    <input name="maxcustomers" type="number">
     <button type="submit">Create New Location</button>
   </form>
-<br /><br />
-
+</section>
 <script src="donut_shop.js"></script>
 <script src="donut_shop_events.js"></script>
 
