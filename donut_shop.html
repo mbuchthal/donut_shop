@@ -6,9 +6,11 @@
   <link href="donut_shop_style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
+
+
+
   <h1 id="greeting"> The Donut Shop </h1>
-  <p> To add a new location, please complete the following fields:</p>
-  <section>
+
   <table id="table1">
     <thead><tr>
         <th scope="col">Location</th>
@@ -25,22 +27,28 @@
         <th scope="col">5:00 PM</th>
         <th scope="col">Total</th>
     </tr></thead>
-        <tbody id="tablebody">
-        </tbody>
+        <tbody id="tablebody"></tbody>
+    </table>
+    <section id="changeinst">
+  <p> To add a new location, please complete the following fields:</p>
+</section>
+  <section id="changeform">
+        <form id="new-location-form">
+            <label for="storelocation">Location:</label>
+            <input name="storelocation" type="text">
+            <label for="averagedonuts">Average Donuts:</label>
+            <input name="averagedonuts" type="text">
+            <label for="mincustomers">Minimum Customers:</label>
+            <input name="mincustomers" type="number">
+            <label for="maxcustomers">Maximum Customers:</label>
+            <input name="maxcustomers" type="number">
+            <button type="submit">Create New Location</button>
+        </form>
     </section>
     <section>
-  <form id="new-location-form">
-    <label for="storelocation">Location:</label>
-    <input name="storelocation" type="text">
-    <label for="averagedonuts">Average Donuts:</label>
-    <input name="averagedonuts" type="text">
-    <label for="mincustomers">Minimum Customers:</label>
-    <input name="mincustomers" type="number">
-    <label for="maxcustomers">Maximum Customers:</label>
-    <input name="maxcustomers" type="number">
-    <button type="submit">Create New Location</button>
-  </form>
-</section>
+        <marquee id="marquee" behavior="scroll" direction="left"> How are sprinkled donuts made?<img src="images/large.jpg" style="width:9.5;height:12em"><img src="images/large.jpg" style="width:9.5;height:12em"><img src="images/large.jpg" style="width:9.5;height:12em">
+        </marquee>
+    </section>
 <script src="donut_shop.js"></script>
 <script src="donut_shop_events.js"></script>
 
