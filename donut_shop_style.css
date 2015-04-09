@@ -1,20 +1,15 @@
-
-
-
 * {
   font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;}
 h1 {
-  color: #A54141;
+  color: #  ;
   text-align: center;
   font-size: 400%;}
 p {
+  font-size: 120%;
   color: #A54141;}
 body {
   font-size: 100%;
   background-color: #FFBABA;}
-form {
-  text-align: center;
-  color: #5B2121;}
 table {
   width: 1200px;
   padding: 10px 10px 10px 10px;
@@ -26,14 +21,41 @@ table {
   float: center;
   color: #5B2121;
   margin-left: auto;
-  margin-right: auto;}
+  margin-right: auto;
+  margin-top: auto;}
 thead {
   color: #5B2121;}
 form {
-
+  position: relative;
+  float: right;
+  margin-right: 11.75em;
+  margin-top: 2em;
+  margin-bottom: 4em;
+  width: 24em;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  border: 2px solid #5B2121;
+  border-radius: .8em;
+  color: #5B2121;
+  font-size: 100%;
+  background-color: #F68585;
+  }
+label {
+  font-size: 120%;
 }
-div {
-  margin-left: 10px;
-  width: 260px;
-  padding: 5px 5px 5px 5px;
+input {
+  display: block;
+  background-color: #FFBABA;
+  border-radius: 2em;
+  border-spacing: 2em;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+button {
+  color: #A54141;
+  border-radius: 3em;
+  background-color: #FFE2E2;
+  margin: auto;
+}
+marquee {
+  font-size: 100%;
 }
