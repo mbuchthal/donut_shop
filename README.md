@@ -1,1 +1,2 @@
 This project is to create a model of a donut shop.  The object has 5 different locations, random customers, and average donuts per customer per store.  We need to calculate a model for the number of donuts needed per hour per store.  Then, we need to manipulate the DOM by adding the data into a table.
+Added some styling to the web page.  Much thanks to the piece of fish at lunch that game me the idea for the color them, and Nathan at the lunch table who told me about marquee... nice throwback to the 90's.
