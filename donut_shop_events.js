@@ -19,4 +19,25 @@ var handleNoteSubmit = function(event) {
 
 locationForm.addEventListener('submit', handleNoteSubmit);
 
+var pie = new d3pie("pie", {
+  header: {
+    title: {
+      text: "A Simple Donut Pie"
+    },
+    location: "pie-center"
+  },
+  size: {
+    pieInnerRadius: "80%"
+  },
+  data: {
+    sortOrder: "label-asc",
+    content: [
+      { label: "JavaScript", value: 1 },
+      { label: "Ruby", value: 2 },
+      { label: "Java", value: 3 },
+      { label: "C++", value: 2 },
+      { label: "Objective-C", value: 6 }
+    ]
+  }
+});
 
